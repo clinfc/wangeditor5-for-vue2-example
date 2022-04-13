@@ -1,6 +1,9 @@
 <template>
   <div>
     <el-form ref="ruleForm" label-position="top" :model="data" :rules="rules">
+      <el-form-item label="readOnly">
+        <el-switch v-model="editable.config.readOnly" active-text="true" inactive-text="false" />
+      </el-form-item>
       <el-form-item label="extendCache">
         <el-switch v-model="editable.extendCache" active-text="true" inactive-text="false" />
       </el-form-item>

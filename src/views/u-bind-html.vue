@@ -1,6 +1,9 @@
 <template>
   <div>
     <el-form ref="ruleForm" label-position="top" :model="data" :rules="rules">
+      <el-form-item label="readOnly">
+        <el-switch v-model="editable.config.readOnly" active-text="true" inactive-text="false" />
+      </el-form-item>
       <el-form-item label="文章">
         <el-select v-model="data.article" placeholder="请选择">
           <el-option v-for="item in article" :key="item.label" :label="item.label" :value="item.value" />
